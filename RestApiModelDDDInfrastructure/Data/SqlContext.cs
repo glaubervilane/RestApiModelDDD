@@ -11,7 +11,6 @@ namespace RestApiModelDDDInfrastructure.Data
     {
         public SqlContext()
         {
-
         }
 
         public SqlContext(DbContextOptions<SqlContext> options) : base(options)
