@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="CrossCutting\" />
+    <Folder Include="CrossCutting\DependencyInjection\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -13,6 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\RestApiModelDDDApplication\RestApiModelDDDApplication.csproj" />
     <ProjectReference Include="..\RestApiModelDDDomain.Core\RestApiModelDDDomain.Core.csproj" />
     <ProjectReference Include="..\RestApiModelDDDomain\RestApiModelDDDomain.csproj" />
   </ItemGroup>

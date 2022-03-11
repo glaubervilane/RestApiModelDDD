@@ -1,8 +1,6 @@
 ﻿using RestApiModelDDDomain.Core.Interfaces.Repositories;
 using RestApiModelDDDomain.Core.Interfaces.Services;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace RestApiModelDDDomain.Services
 {
