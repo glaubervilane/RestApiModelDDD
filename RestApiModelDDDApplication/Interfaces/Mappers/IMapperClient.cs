@@ -2,7 +2,7 @@
 using RestApiModelDDDomain.Entities;
 using System.Collections.Generic;
 
-namespace RestApiModelDDDInfrastructure.CrossCutting.Interfaces
+namespace RestApiModelDDDApplication.Interfaces.Mappers
 {
     public interface IMapperClient
     {

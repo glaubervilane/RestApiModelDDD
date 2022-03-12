@@ -1,10 +1,12 @@
 ﻿using RestApiModelDDDApplication.Dtos;
-using RestApiModelDDDInfrastructure.CrossCutting.Interfaces;
+using RestApiModelDDDApplication.Interfaces.Mappers;
 using RestApiModelDDDomain.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 
-namespace RestApiModelDDDInfrastructure.CrossCutting.Mapper
+namespace RestApiModelDDDApplication.Mappers
 {
     public class MapperClient : IMapperClient
     {
@@ -13,9 +15,12 @@ namespace RestApiModelDDDInfrastructure.CrossCutting.Mapper
             var clientDto = new ClientDto()
             {
                 Id = client.Id
-               ,FirstName = client.FirstName
-               ,LastName = client.LastName
-               ,Email = client.Email
+               ,
+                FirstName = client.FirstName
+               ,
+                LastName = client.LastName
+               ,
+                Email = client.Email
             };
             return clientDto;
         }
@@ -24,20 +29,26 @@ namespace RestApiModelDDDInfrastructure.CrossCutting.Mapper
         {
             var client = new Client()
             {
-                 Id = clientDto.Id
-                ,FirstName = clientDto.FirstName
-                ,LastName = clientDto.LastName
-                ,Email = clientDto.Email
+                Id = clientDto.Id
+                ,
+                FirstName = clientDto.FirstName
+                ,
+                LastName = clientDto.LastName
+                ,
+                Email = clientDto.Email
             };
             return client;
         }
 
         public IEnumerable<ClientDto> MapperListClientsDto(IEnumerable<Client> clients)
         {
-            var dto = clients.Select(c =>  new ClientDto { Id = c.Id,
+            var dto = clients.Select(c => new ClientDto
+            {
+                Id = c.Id,
                 FirstName = c.FirstName,
                 LastName = c.LastName,
-                Email = c.Email });
+                Email = c.Email
+            });
             return dto;
         }
     }
