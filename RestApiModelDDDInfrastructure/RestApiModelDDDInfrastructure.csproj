@@ -5,16 +5,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="CrossCutting\DependencyInjection\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.0" />
+    <PackageReference Include="Autofac" Version="5.1.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.3" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\RestApiModelDDDApplication\RestApiModelDDDApplication.csproj" />
     <ProjectReference Include="..\RestApiModelDDDomain.Core\RestApiModelDDDomain.Core.csproj" />
+    <ProjectReference Include="..\RestApiModelDDDomain.Services\RestApiModelDDDomain.Services.csproj" />
     <ProjectReference Include="..\RestApiModelDDDomain\RestApiModelDDDomain.csproj" />
   </ItemGroup>
 
